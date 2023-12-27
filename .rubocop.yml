@@ -4,10 +4,8 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-md
-  - rubocop-rspec
 
 AllCops:
-  NewCops: enable
   TargetRubyVersion: 2.7
   # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
   # to ignore them, so only the ones explicitly set in this file are enabled.
@@ -82,6 +80,7 @@ Layout/EndAlignment:
 
 Layout/EndOfLine:
   Enabled: true
+  EnforcedStyle: lf
 
 Layout/EmptyLineAfterMagicComment:
   Enabled: true
@@ -162,7 +161,7 @@ Style/ExplicitBlockArgument:
   Enabled: true
 
 Style/FrozenStringLiteralComment:
-  Enabled: true
+  Enabled: false
   EnforcedStyle: always
   Exclude:
     - "actionview/test/**/*.builder"
@@ -200,7 +199,7 @@ Layout/SpaceInsideParens:
 # Check quotes usage according to lint rule below.
 Style/StringLiterals:
   Enabled: true
-  EnforcedStyle: single_quotes
+  EnforcedStyle: double_quotes
 
 # Detect hard tabs, no hard tabs.
 Layout/IndentationStyle:
@@ -335,9 +334,6 @@ Performance/ReverseEach:
 Performance/StringReplacement:
   Enabled: true
 
-Performance/UnfreezeString:
-  Enabled: true
-
 Performance/DeletePrefix:
   Enabled: true
 
@@ -352,6 +348,8 @@ Performance/InefficientHashSearch:
 
 Performance/ConstantRegexp:
   Enabled: true
+  Exclude:
+    - "bin/bundle"
 
 Performance/RedundantStringChars:
   Enabled: true
