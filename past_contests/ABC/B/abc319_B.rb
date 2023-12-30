@@ -6,7 +6,7 @@ list = []
   list << i if N % i == 0
 end
 
-(0..12).each do |i|
+(0..N).each do |i|
   list.each do |j|
     if i % (N / j) == 0
       result << j
