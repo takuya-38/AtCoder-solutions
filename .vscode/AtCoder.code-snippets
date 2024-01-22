@@ -1,0 +1,67 @@
+{
+  // input関連
+  "input": {
+    "prefix": "si",
+    "body": ["s = gets.chomp"],
+    "description": "標準入力から文字列を取得"
+  },
+  "input_int": {
+    "prefix": "sii",
+    "body": ["n = gets.to_i"],
+    "description": "標準入力から整数を取得"
+  },
+  "input_float": {
+    "prefix": "sif",
+    "body": ["n_f = gets.to_f"],
+    "description": "標準入力から浮動小数を取得"
+  },
+  "input_split": {
+    "prefix": "sis",
+    "body": ["= gets.split"],
+    "description": "標準入力からスペースで区切られた文字列を配列として取得"
+  },
+  "input_integers": {
+    "prefix": "siis",
+    "body": ["= gets.split.map(&:to_i)"],
+    "description": "標準入力からスペースで区切られた整数を配列として取得"
+  },
+  "input_floats": {
+    "prefix": "sifs",
+    "body": ["= gets.split.map(&:to_f)"],
+    "description": "標準入力からスペースで区切られた浮動小数を配列として取得"
+  },
+  "input_chars": {
+    "prefix": "sic",
+    "body": ["chars = gets.chomp.chars"],
+    "description": "標準入力から1文字ずつを配列として取得"
+  },
+  "input_intenger_chars": {
+    "prefix": "siic",
+    "body": ["i_chars = gets.chomp.chars.map(&:to_i)"],
+    "description": "標準入力から1文字(整数)ずつを配列として取得"
+  },
+  "input_matrix": {
+    "prefix": "sim",
+    "body": ["matrix = Array.new(${1:H}) {gets.split.map(&:to_i)}"],
+    "description": "標準入力から二次元配列として取得"
+  },
+
+  // output関連
+  "output": {
+    "prefix": "so",
+    "body": ["puts ${1:output}"],
+    "description": "標準出力への出力"
+  },
+  "output_ternary_theorem": {
+    "prefix": "sot",
+    "body": ["puts ${1:flag} ? \"Yes\" : \"No\""],
+    "description": "標準出力への出力(三項定理)"
+  },
+
+  // その他
+  "flag": {
+    "prefix": "fl",
+    "body": ["flag = true"],
+    "description": "flag変数の初期化"
+  }
+}

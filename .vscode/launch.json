@@ -12,7 +12,8 @@
       "args": [],
       "askParameters": false,
       "useBundler": false,
-      "useTerminal": true
+      "useTerminal": true,
+      "console": "integratedTerminal"
     },
     {
       "type": "rdbg",
