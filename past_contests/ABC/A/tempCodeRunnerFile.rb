@@ -1,9 +1,2 @@
-_, h, x = gets.split.map(&:to_i)
-p_list = gets.split.map(&:to_i)
-
-p_list.each_with_index do |p, i|
-  if x <= h + p
-    puts i + 1
-    break
-  end
-end
+a, b = gets.split.map(&:to_i)
+puts (a - 1) / 3 == (b - 1) / 3 ? "Yes" : "No"
