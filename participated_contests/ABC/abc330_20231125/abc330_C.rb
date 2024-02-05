@@ -21,7 +21,7 @@
 
 D = gets.to_i
 
-def find_min_diff()
+def find_min_diff
   left = 0
   right = Math.sqrt(D).to_i
   min_diff = D  # D から 0^2 + 0^2 を引いた値で初期化

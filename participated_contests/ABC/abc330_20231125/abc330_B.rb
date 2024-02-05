@@ -16,4 +16,4 @@ list.each do |x|
   end
 end
 
-print result.join(' ')
+print result.join(" ")

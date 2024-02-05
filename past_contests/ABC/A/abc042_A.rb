@@ -12,9 +12,9 @@ def judge_575
   end
 
   if five_count == 2 && seven_count == 1
-    'YES'
+    "YES"
   else
-    'NO'
+    "NO"
   end
 end
 

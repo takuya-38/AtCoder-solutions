@@ -44,4 +44,4 @@ table.each do |row|
   end
 end
 
-puts result ? 'Yes' : 'No'
+puts result ? "Yes" : "No"

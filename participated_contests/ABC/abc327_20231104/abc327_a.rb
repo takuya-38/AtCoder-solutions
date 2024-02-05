@@ -2,6 +2,6 @@
 
 N, S = 2.times.map { gets.chomp }
 
-result = S.include?('ab') || S.include?('ba')
+result = S.include?("ab") || S.include?("ba")
 
-puts result ? 'Yes' : 'No'
+puts result ? "Yes" : "No"

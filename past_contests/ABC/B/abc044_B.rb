@@ -7,7 +7,7 @@ w_list.each do |c|
   list.include?(c) ? list.delete(c) : list << c
 end
 
-puts list.empty? ? 'Yes' : 'No'
+puts list.empty? ? "Yes" : "No"
 
 #-----------------------------------------------------
 # w = gets.chomp.chars.tally

@@ -3,9 +3,9 @@
 A, B = gets.chomp.split.map(&:to_i)
 
 if A == B
-  puts 'Draw'
+  puts "Draw"
 elsif (A > B && B != 1) || A == 1
-  puts 'Alice'
+  puts "Alice"
 else
-  puts 'Bob'
+  puts "Bob"
 end

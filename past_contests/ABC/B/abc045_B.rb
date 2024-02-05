@@ -25,17 +25,17 @@
 
 a, b, c = 3.times.map { gets.chomp.chars }
 
-turn = 'a'
+turn = "a"
 
 while true
   case turn
-  when 'a'
+  when "a"
     break if a.empty?
     turn = a.shift
-  when 'b'
+  when "b"
     break if b.empty?
     turn = b.shift
-  when 'c'
+  when "c"
     break if c.empty?
     turn = c.shift
   end
