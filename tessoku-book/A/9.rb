@@ -1,5 +1,5 @@
 H, W, N = gets.split.map(&:to_i)
-matrix = Array.new(H) { Array.new(W, 0) }
+matrix = Array.new(H + 1) { Array.new(W + 1, 0) }
 
 N.times do
   A, B, C, D = gets.split.map(&:to_i)
@@ -10,18 +10,18 @@ N.times do
   matrix[C][D] += 1
 end
 
-H.times do |i|
-  W.times do |j|
-    matrix[i][j] += matrix[i][j - 1] if j != 0
+(H + 1).times do |i|
+  (1...W).each do |j|
+    matrix[i][j] += matrix[i][j - 1]
   end
 end
 
-W.times do |j|
-  H.times do |i|
-    matrix[i][j] += matrix[i - 1][j] if i != 0
+(1...H).each do |i|
+  (W + 1).times do |j|
+    matrix[i][j] += matrix[i - 1][j]
   end
 end
 
 H.times do |i|
-  puts matrix[i].join(" ")
+  puts matrix[i][0...W].join(" ")
 end
